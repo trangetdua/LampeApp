@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Thanh tiêu đề -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:title="@string/app_name"
+        android:titleTextColor="@android:color/white"/>
+
+    <!-- Vùng hiển thị màu sắc -->
+    <TextView
+        android:id="@+id/color_display"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:text="ROUGE : 255 ; VERT : 0 ; BLEU : 0"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:background="#FF0000"/>
+
+    <!-- Vùng chứa các nút -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="16dp">
+
+        <!-- Hàng 1: Tăng/Giảm ĐỎ -->
+        <Button
+            android:id="@+id/increase_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+ROUGE"
+            android:layout_columnWeight="1"
+            android:background="#DDDDDD"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/decrease_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-ROUGE"
+            android:layout_columnWeight="1"
+            android:background="#DDDDDD"
+            android:textColor="@android:color/black"/>
+
+        <!-- Hàng 2: Tăng/Giảm XANH LÁ -->
+        <Button
+            android:id="@+id/increase_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+VERT"
+            android:layout_columnWeight="1"
+            android:background="#DDDDDD"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/decrease_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-VERT"
+            android:layout_columnWeight="1"
+            android:background="#DDDDDD"
+            android:textColor="@android:color/black"/>
+
+        <!-- Hàng 3: Tăng/Giảm XANH DƯƠNG -->
+        <Button
+            android:id="@+id/increase_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="+BLEU"
+            android:layout_columnWeight="1"
+            android:background="#DDDDDD"
+            android:textColor="@android:color/black"/>
+
+        <Button
+            android:id="@+id/decrease_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="-BLEU"
+            android:layout_columnWeight="1"
+            android:background="#DDDDDD"
+            android:textColor="@android:color/black"/>
+    </GridLayout>
+</LinearLayout>
